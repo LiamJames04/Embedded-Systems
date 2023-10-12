@@ -6,6 +6,7 @@ using namespace uop_msb;
 DigitalOut greenLED(TRAF_GRN1_PIN);
 Buzzer buzz;
 Buttons buttons;
+LCD_16X2_DISPLAY lcd;
 
 // TIP: (I suggest you read this!)
 //
@@ -22,6 +23,13 @@ int main()
     {
         //3 Dots
         //On for 500ms
+
+        lcd.cls();
+
+        lcd.printf("3 DOTS");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf(". . .");
+
         greenLED = 1;
         buzz.playTone("C");
         wait_us(WAIT_TIME_MS * 150);  //500ms
@@ -44,6 +52,13 @@ int main()
 
         //3 Dashes
         //Off for 500ms
+
+        lcd.cls();
+
+        lcd.printf("3 DASHES");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf("- - -");
+
         greenLED = 0;
         buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
         wait_us(WAIT_TIME_MS * 450);  //500ms
@@ -67,6 +82,13 @@ int main()
 
         //3 Dots
         //On for 500ms
+
+        lcd.cls();
+
+        lcd.printf("3 DOTS");
+        lcd.locate(1, 0);   //Row 1, Col 0
+        lcd.printf(". . .");
+
         greenLED = 1;
         buzz.playTone("C");
         wait_us(WAIT_TIME_MS * 150);  //500ms
