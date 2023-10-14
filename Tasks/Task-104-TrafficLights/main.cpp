@@ -13,7 +13,6 @@ int main()
 {
     while(true)
     {
-        
         red=1;
         lcd.cls();
         lcd.puts("RED");
