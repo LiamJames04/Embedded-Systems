@@ -39,14 +39,14 @@ int main()
 
     // Stop
     while (parsedon > 0) {
-        wait_us(delay_on * 1000);
         led1 = 1;
         led2 = 1;
         led3 = 1;    
-        wait_us(delay_off * 1000);
+        wait_us(delay_on * 1000);
         led1 = 0;
         led2 = 0;
         led3 = 0;
+        wait_us(delay_off * 1000);
         }
     printf("Invalid - please restart and try again\n");
     while(1);    
