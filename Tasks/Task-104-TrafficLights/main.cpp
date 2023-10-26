@@ -48,11 +48,6 @@ int main()
 
         amber=0;
         wait_us(20000);
-
-        red=1;
-        lcd.cls();
-        lcd.puts("RED");
-        wait_us(2000000);
     }
 
     while (true)
