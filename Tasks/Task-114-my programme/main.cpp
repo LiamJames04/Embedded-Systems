@@ -6,6 +6,17 @@ DigitalOut greenLED(PC_6);
 // main() runs in its own thread in the OS
 int main()
 {
+    //Test to see if the lights work
+        redLED=1;
+        yellowLED=1;
+        greenLED=1;
+        wait_us(2000000);
+
+        redLED=0;
+        yellowLED=0;
+        greenLED=0;
+        wait_us(20000);
+
 
     while(true){
 
