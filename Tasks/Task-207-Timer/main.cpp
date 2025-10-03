@@ -29,16 +29,17 @@ int main()
     while (true) {
         //Wait for switch press
         while (SW_BLUE == 0);
-
+        wait_us(100000);
         //Turn on LED
         ledRed = 1;
 
         //Wait for 500ms
         tmr1.reset();
+        wait_us(1000);
         while (tmr1.elapsed_time() < 500ms); //How about this for C++ magic :)
-
-        wait_us(500000);
-
+        while(SW_BLUE==1);
+        wait_us(5000000);
+        
         //Turn off LED
         ledRed = 0;
     }
